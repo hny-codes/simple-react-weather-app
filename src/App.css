@@ -1,0 +1,12 @@
+@import url('./index.css');
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
