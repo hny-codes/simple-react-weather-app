@@ -1,7 +1,18 @@
 import { useState } from 'react';
 import './forecast.css';
 
-const Forecast = ({ date, temp, cel, fah, image, isCel }) => {
+const Forecast = ({
+  date,
+  temp,
+  cel,
+  highCel,
+  lowCel,
+  fah,
+  highFah,
+  lowFah,
+  image,
+  isCel,
+}) => {
   const weekdays = [
     'Sunday',
     'Monday',
@@ -27,7 +38,15 @@ const Forecast = ({ date, temp, cel, fah, image, isCel }) => {
           <p>{date}</p>
         </div>
         <div className='forecast-temp'>
-          {isCel ? <h3>{`${cel} °C`}</h3> : <h3>{`${fah} °F`}</h3>}
+          {isCel ? (
+            <h3>
+              <span className='min-temp'>{`${lowCel} °C`}</span> / <span>{`${highCel} °C`}</span>
+            </h3>
+          ) : (
+            <h3>
+              <span className='min-temp'>{`${lowFah} °F`}</span> / <span>{`${highFah} °F`}</span>
+            </h3>
+          )}
         </div>
         <div className='forecast-image'>
           <img src={image} alt='forecast image' />
