@@ -1,6 +1,7 @@
+import { TempToggle } from '../tempToggle/tempToggle';
 import './searchbar.css';
 
-export const SearchBar = ({ handleSearch, handleSubmit }) => {
+export const SearchBar = ({ handleSearch, handleSubmit, handleToggle }) => {
   return (
     <form className='search-bar'>
       <label htmlFor='search'></label>
@@ -11,9 +12,10 @@ export const SearchBar = ({ handleSearch, handleSubmit }) => {
         placeholder='Search..'
         onInput={handleSearch}
       />
-      <button type='submit' onClick={handleSubmit}>
+      <button className='btn-click' type='submit' onClick={handleSubmit}>
         🔍
       </button>
+      <TempToggle handleToggle={handleToggle} />
     </form>
   );
 };

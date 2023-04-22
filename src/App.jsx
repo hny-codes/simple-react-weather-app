@@ -50,9 +50,18 @@ function App() {
     setLoading(true);
   };
 
+  const handleToggle = (e) => {
+    e.preventDefault();
+    setIsCel(() => !isCel);
+  };
+
   return (
     <div className='App'>
-      <SearchBar handleSearch={handleSearch} handleSubmit={handleSubmit} />
+      <SearchBar
+        handleSearch={handleSearch}
+        handleSubmit={handleSubmit}
+        handleToggle={handleToggle}
+      />
       {isError ? (
         <h1 className='error-message'>An error occured: {error}</h1>
       ) : loading ? (

@@ -1,0 +1,14 @@
+.toggle-btn {
+  position: absolute;
+  left: -70px;
+  top: 6px;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background-color: #fff;
+  border: none;
+}
+
+.toggle-btn:hover {
+  outline: 2px solid white;
+  cursor: pointer;
+}
