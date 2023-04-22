@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Exo2-0 Light';
+  src: local('Exo2-0 Light'), url(./assets/fonts/exo-2-0.light.otf)
+}
+
+@font-face {
+  font-family: 'Exo2-0 Regular';
+  src: local('Exo2-0 Regular'), url(./assets/fonts/exo-2-0.regular.otf)
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary-01: #03045e;
+  --clr-primary-02: #023e8a;
+  --clr-primary-03: #0077b6;
+
+  --clr-accent-01: hsl(0, 0, 100, 0.1);
+  
+  --ff-primary: 'Exo2-0 Regular', sans-serif;
+  --ff-secondary: 'Exo2-0 Light', sans-serif;
+}
+
+body {
+  background-color: var(--clr-primary-03);
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: var(--ff-primary);
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: var(--ff-secondary);
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-family: var(--ff-secondary);
+}
