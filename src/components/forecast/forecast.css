@@ -1,0 +1,14 @@
+@import url('../../index.css');
+
+.forecast {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 3rem;
+}
+
+.forecast-wrapper:hover {
+  filter: brightness(1.3);
+  cursor: pointer;
+}
