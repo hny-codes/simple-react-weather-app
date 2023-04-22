@@ -10,6 +10,7 @@ function App() {
   const [error, setError] = useState(null);
   const [isError, setIsError] = useState(false);
   const [search, setSearch] = useState('');
+  const [loading, setLoading] = useState('true');
   const [isCel, setIsCel] = useState(false);
   const DAYS = 5;
   const API_CALL = `http://api.weatherapi.com/v1/forecast.json?key=${
@@ -29,6 +30,7 @@ function App() {
         console.log(data);
         setData(data);
         setIsError(false);
+        setLoading(false);
       })
       .catch((error) => {
         setError(error.message);
@@ -45,15 +47,16 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLocation(search);
+    setLoading(true);
   };
 
   return (
     <div className='App'>
       <SearchBar handleSearch={handleSearch} handleSubmit={handleSubmit} />
       {isError ? (
-        <h1>An error occured: {error}</h1>
-      ) : !data ? (
-        <p>Loading...</p>
+        <h1 className='error-message'>An error occured: {error}</h1>
+      ) : loading ? (
+        <span className='loader'></span>
       ) : (
         <main className='weather'>
           <CurrentForecast data={data} isCel={isCel} />
