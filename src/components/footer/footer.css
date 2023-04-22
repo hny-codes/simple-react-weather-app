@@ -1,0 +1,31 @@
+.footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+
+  display: inline-flex;
+  flex-shrink: 1;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 100ms ease;
+}
+
+.footer a:hover {
+  transform: scale(1.1);
+}
+
+
+.github-logo {
+  width: 40px;
+  filter: brightness(0) invert(1);
+}
