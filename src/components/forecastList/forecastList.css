@@ -2,5 +2,6 @@
 
 .forecast-list {
   background-color: hsla(0, 0%, 0%, 0.35);
-  padding-block: 1.5rem;
+  padding: 1rem 1rem 0;
+  border-radius: 20px;
 }
