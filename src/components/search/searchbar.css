@@ -1,0 +1,31 @@
+@import url('../../index.css');
+
+.search-bar {
+  align-self: center;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.search-bar input[type='text'] {
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 30px;
+  border: none;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  
+}
+
+.search-bar button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  position: absolute;
+  right: 5px;
+  bottom: 14px;
+  padding: 0.2rem;
+}
+
+.search-bar input:focus {
+  outline: 3px solid #fff;
+}
