@@ -18,7 +18,6 @@ function App() {
   }&q=${location}&days=${DAYS}&aqi=no&alerts=no`;
 
   useEffect(() => {
-    console.log(import.meta.env.VITE_API_KEY);
     fetch(API_CALL, { mode: 'cors' })
       .then((response) => {
         if (!response.ok) {
@@ -27,7 +26,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setData(data);
         setIsError(false);
         setLoading(false);
@@ -35,12 +33,12 @@ function App() {
       .catch((error) => {
         setError(error.message);
         setIsError(true);
+        setLoading(false);
         error.json().then((body) => setError(body.error.message));
       });
   }, [location]);
 
   const handleSearch = (e) => {
-    e.preventDefault();
     setSearch(e.target.value);
   };
 
@@ -48,6 +46,7 @@ function App() {
     e.preventDefault();
     setLocation(search);
     setLoading(true);
+    setIsError(false);
   };
 
   const handleToggle = (e) => {
