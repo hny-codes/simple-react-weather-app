@@ -6,6 +6,7 @@
   border-radius: 20px;
   background-color: #fff;
   border: none;
+  transition: all 200ms ease-in;
 }
 
 .toggle-btn:hover {

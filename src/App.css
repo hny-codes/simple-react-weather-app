@@ -5,6 +5,7 @@
   flex-direction: column;
   width: 95%;
   margin: 0.5rem auto;
+  position: relative;
 }
 
 .error-message {
