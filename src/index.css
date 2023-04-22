@@ -32,6 +32,10 @@ body {
   color: #fff;
 }
 
+input {
+  appearance: none;
+}
+
 h1 {
   font-size: 3rem;
   font-family: var(--ff-primary);
