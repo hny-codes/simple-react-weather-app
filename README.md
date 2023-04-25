@@ -20,4 +20,6 @@ A simple weather application created with React (Javascript) and scaffolded with
 4. `npm run dev` to launch local development environment
 5. `npm run build` to build the project
 
-Loader by [CSS Loader library](https://cssloaders.github.io/)
+Many thanks for:
+- [Weather API's interactive API explorer](https://www.weatherapi.com/api-explorer.aspx)
+- Loader by [CSS Loader library](https://cssloaders.github.io/)
