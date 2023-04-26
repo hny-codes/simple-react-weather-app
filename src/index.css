@@ -28,7 +28,7 @@
 }
 
 body {
-  background-color: var(--clr-primary-03);
+  background-color: var(--clr-primary-02);
   color: #fff;
   overflow-y: hidden;
 }

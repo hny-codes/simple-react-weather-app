@@ -10,11 +10,18 @@
 .current-forecast img {
   object-fit: contain;
   aspect-ratio: 4/1;
+  width: 100%;
 }
 
 @media (min-width: 800px) {
   .current-forecast {
     padding-top: 0;
+    flex-shrink: 1;
+    max-width: 400px;
+  }
+
+  .current-forecast img {
+    aspect-ratio: 2/1;
     flex-shrink: 1;
   }
 }
